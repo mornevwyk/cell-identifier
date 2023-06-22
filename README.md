@@ -10,3 +10,5 @@ The steps taken to identify the cells and segment the image are as follows:
   3- A bandpass image is created by subtracting image 2k from k. bandpassImage = k - 2k.
   4- Distance transform is applied to the bandpass image and the centers of each cell is identified.
   5- Using Mathematica's watershed algorithm with a minimum saliency of 0.8, seeds as the peaks from the distance trnsform, and the background as the morphological binarized version of the distance transform.
+
+After segmentation, individual cell signals can be exported as the mean signal and sum signal as well as the cell position (centroid) and cell index in the list of watershed components.
